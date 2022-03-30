@@ -40,8 +40,8 @@ class LazySingleton{
 //                if (instance == null) {
 //                    instance = new LazySingleton2();
 //                    // 字节码
-//                    // JIT CPU  指令排序
-//                    // 1. 分配空间
+//                    // JIT(Just In Time)即时编译器  CPU  指令排序
+//                    // 1. 在堆空间分配一个小空间
 //                    // 2. 初始化
 //                    // 3. 引用赋值
 //                }

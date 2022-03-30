@@ -7,19 +7,19 @@ public class SerializeSingletonTest {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
         SerializeSingleton instance = SerializeSingleton.getInstance();
-        System.out.println();
+        System.out.println(instance);
 
         // 序列化
-        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("testSerializable"));
-        oos.writeObject(instance);
-        oos.close();
+//        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("testSerializable2"));
+//        oos.writeObject(instance);
+//        oos.close();
 
         // 反序列化
-//        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("testSerializable"));
-//        SerializeSingleton serializeSingleton = (SerializeSingleton) ois.readObject();
-//        ois.close();
-//
-//        System.out.println(instance == serializeSingleton);
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("testSerializable1"));
+        SerializeSingleton serializeSingleton = (SerializeSingleton) ois.readObject();
+        ois.close();
+
+        System.out.println(instance == serializeSingleton);
 
 
     }
