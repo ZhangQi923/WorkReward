@@ -4,20 +4,20 @@ public class InnerClassSingletonTest {
 
     public static void main(String[] args) {
         // 单线程
-        InnerClassSingleton instance1 = InnerClassSingleton.getInstance();
-        InnerClassSingleton instance2 = InnerClassSingleton.getInstance();
-        System.out.println(instance1 == instance2);
+//        InnerClassSingleton instance1 = InnerClassSingleton.getInstance();
+//        InnerClassSingleton instance2 = InnerClassSingleton.getInstance();
+//        System.out.println(instance1 == instance2);
 
         // 多线程 安全
-//        new Thread(() -> {
-//            InnerClassSingleton instance = InnerClassSingleton.getInstance();
-//            System.out.println(instance);
-//        }).start();
-//
-//        new Thread(() -> {
-//            InnerClassSingleton instance = InnerClassSingleton.getInstance();
-//            System.out.println(instance);
-//        }).start();
+        new Thread(() -> {
+            InnerClassSingleton instance = InnerClassSingleton.getInstance();
+            System.out.println(instance);
+        }).start();
+
+        new Thread(() -> {
+            InnerClassSingleton instance = InnerClassSingleton.getInstance();
+            System.out.println(instance);
+        }).start();
     }
 }
 

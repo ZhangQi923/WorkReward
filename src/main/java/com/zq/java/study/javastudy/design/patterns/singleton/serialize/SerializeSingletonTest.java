@@ -10,12 +10,12 @@ public class SerializeSingletonTest {
         System.out.println(instance);
 
         // 序列化
-//        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("testSerializable2"));
+//        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("testSerializable5"));
 //        oos.writeObject(instance);
 //        oos.close();
 
         // 反序列化
-        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("testSerializable1"));
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("testSerializable5"));
         SerializeSingleton serializeSingleton = (SerializeSingleton) ois.readObject();
         ois.close();
 

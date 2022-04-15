@@ -27,15 +27,20 @@ public class ReflectClassSingletonTest {
 class ReflectClassSingleton{
 
     private static class ReflectInnerSingleton{
+
+        static {
+            System.out.println("进来");
+        }
+
         private static ReflectClassSingleton instance = new ReflectClassSingleton();
     }
 
     private ReflectClassSingleton() {
-
+        System.out.println("开始");
         // 防止反射攻击 只适用于饿汉模式和静态内部类的单例
-//        if(ReflectInnerSingleton.instance != null) {
-//            throw new RuntimeException("单例不允许多个实例");
-//        }
+        if(ReflectInnerSingleton.instance != null) {
+            throw new RuntimeException("单例不允许多个实例");
+        }
     }
 
     public static ReflectClassSingleton getInstance(){
