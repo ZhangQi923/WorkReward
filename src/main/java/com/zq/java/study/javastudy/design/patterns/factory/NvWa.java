@@ -3,16 +3,11 @@ package com.zq.java.study.javastudy.design.patterns.factory;
 import com.zq.java.study.javastudy.design.patterns.factory.abstraction.entity.BlackMan;
 import com.zq.java.study.javastudy.design.patterns.factory.abstraction.entity.BlackWoman;
 import com.zq.java.study.javastudy.design.patterns.factory.abstraction.factory.BlackHumanFactory;
-import com.zq.java.study.javastudy.design.patterns.factory.base.Human;
 import com.zq.java.study.javastudy.design.patterns.factory.entity.BlackHuman;
 import com.zq.java.study.javastudy.design.patterns.factory.entity.WhiteHuman;
 import com.zq.java.study.javastudy.design.patterns.factory.entity.YellowHuman;
-import com.zq.java.study.javastudy.design.patterns.factory.enums.HumanSpeciesEnum;
-import com.zq.java.study.javastudy.design.patterns.factory.method.AbstractHumanFactory;
 import com.zq.java.study.javastudy.design.patterns.factory.method.WhiteHumanFactory;
 import com.zq.java.study.javastudy.design.patterns.factory.method.YellowHumanFactory;
-import com.zq.java.study.javastudy.design.patterns.factory.simple.HumanFactory;
-import java.util.Objects;
 
 /**
  * 女娲
